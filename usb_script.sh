@@ -8,11 +8,11 @@ wget 'https://raw.githubusercontent.com/secretpublicfiles/storage/main/cmdline.t
 wget 'https://raw.githubusercontent.com/secretpublicfiles/storage/main/rc.local' -O rc.local
 sudo cp cmdline.txt /boot
 sudo rm cmdline.txt
-sudo dd bs=1M if=/dev/zero of=/piusb.bin count=10240
-sudo mkdosfs "/piusb.bin"
-sudo mkdir /mnt/usb_share
-sudo echo "/piusb.bin /mnt/usb_share vfat users,umask=000 0 2" >> /etc/fstab
-sudo mount -a
-sudo cp rc.local /etc
-sudo rm rc.local
+# sudo dd bs=1M if=/dev/zero of=/piusb.bin count=10240
+# sudo mkdosfs "/piusb.bin"
+# sudo mkdir /mnt/usb_share
+# sudo echo "/piusb.bin /mnt/usb_share vfat users,umask=000 0 2" >> /etc/fstab
+# sudo mount -a
+# sudo cp rc.local /etc
+# sudo rm rc.local
 echo "Please reboot the system!"
